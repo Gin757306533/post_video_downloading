@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script src="https://cdn.bootcss.com/flv.js/1.3.3/flv.min.js"></script>
-    <title>已经分析完的视频展示</title>
+    <title>可视化</title>
 </header>
 <body>
 {%  include 'header.html' %}
@@ -17,7 +17,7 @@
 
 
             <h1>
-                已经分析完的视频展示
+                可视化
             </h1>
 
             <br>
@@ -26,12 +26,12 @@
 
                     <div style="float:left;border:1px solid #FFCC00; width: 30%; height: 230px; margin-left:20px; margin-bottom:20px;">
                         <div style="float:left; width: 100%; text-align: center;">{{ item.name }}</div>
-                        <video class="video" style="width:100%; height:80%;" autoplay="autoplay" controls="controls" controlslist="nodownload"
+                        <video id="{{item.id}}" style="width:100%; height:80%;" autoplay="autoplay" controls="controls" controlslist="nodownload"
                    disablePictureInPicture>
-                    <source src="/media/videos/detect_finished_and_celebrity_incide/trump.mp4" type="video/mp4">
+                    <!--<source src="/media/videos/detect_finished_and_celebrity_incide/trump.mp4" type="video/mp4">-->
                         </video>
                         <div style="float:left;">作者：{{ item.author }}</div>
-                        <div style="float:right;"><a href="{{ item.url }}">点我直达对方老巢</a></div>
+                        <div style="float:right;"><a href="{{ item.url }}">作者主页</a></div>
                     </div>
                 <!--</div>-->
             {% endfor %}
@@ -54,21 +54,36 @@
 
 
 
-<video id="videoElement" style="width:100%; height:80%;" autoplay="autoplay" controls="controls" controlslist="nodownload"
-                   disablePictureInPicture>
+<!--<video id="videoElement" style="width:100%; height:80%;" autoplay="autoplay" controls="controls" controlslist="nodownload"-->
+                   <!--disablePictureInPicture>-->
 
-</video>
+<!--</video>-->
 <script>
-    if (flvjs.isSupported()) {//检查flvjs能否正常使用
-        var videoElement = document.getElementById('videoElement');//使用id选择器找到第二步设置的dom元素
+{% for item in items %}
+if (flvjs.isSupported()) {//检查flvjs能否正常使用
+        var videoElement = document.getElementById('{{item.id}}');//使用id选择器找到第二步设置的dom元素
         var flvPlayer = flvjs.createPlayer({//创建一个新的flv播放器对象
             type: 'flv',//类型flv
-            url: '/media/videos/detect_finished_and_celebrity_incide/1.flv'//flv文件地址
+         //     url: '/media/videos/pawan/90后宝妈考研自习室====云南大学～汉硕====21533913====1573543618.flv'//flv文件地址
+            url: '{{item.path}}'
         });
         flvPlayer.attachMediaElement(videoElement);//将flv视频装载进video元素内
         flvPlayer.load();//载入视频
-        flvPlayer.play();//播放视频，如果不想要自动播放，去掉本行
+        //flvPlayer.play();//播放视频，如果不想要自动播放，去掉本行
     }
+{% endfor %}
+
+    <!--if (flvjs.isSupported()) {//检查flvjs能否正常使用-->
+        <!--var videoElement = document.getElementById('videoElement');//使用id选择器找到第二步设置的dom元素-->
+        <!--var flvPlayer = flvjs.createPlayer({//创建一个新的flv播放器对象-->
+            <!--type: 'flv',//类型flv-->
+         <!--//     url: '/media/videos/pawan/90后宝妈考研自习室====云南大学～汉硕====21533913====1573543618.flv'//flv文件地址-->
+            <!--url: '{{items.2.path}}'-->
+        <!--});-->
+        <!--flvPlayer.attachMediaElement(videoElement);//将flv视频装载进video元素内-->
+        <!--flvPlayer.load();//载入视频-->
+        <!--//flvPlayer.play();//播放视频，如果不想要自动播放，去掉本行-->
+    <!--}-->
 </script>
 
         </div>

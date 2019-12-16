@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
+<html>
 <body>
-$END$
+<input type="file" id="file" onchange="onInputFileChange()">
+<audio id="audio_id" controls autoplay loop>Your browser can't support HTML5 Audio</audio>
+<script>
+function onInputFileChange() {
+   var file = document.getElementById('file').files[0];
+   var url = URL.createObjectURL(file);
+   console.log(url);
+   document.getElementById("audio_id").src = url;
+}
+</script>
+
+<input type="file" id="file" onchange="onInputFileChange()">
+<video id="video_id" controls="controls">您的浏览器不支持 video 标签。</video>
+<script>
+function onInputFileChange() {
+   var file = document.getElementById('file').files[0];
+   var url = URL.createObjectURL(file);
+   console.log(url);
+   document.getElementById("video_id").src = url;
+}
+</script>
 </body>
 </html>

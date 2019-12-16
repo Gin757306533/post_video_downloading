@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet", href="bootstrap/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div style="float:left; margin-bottom:20px;">
+    <table class="table table-striped" style="float:left; width:900px; ">
+	<caption>条纹表格布局</caption>
+	<thead>
+		<tr>
+			<th>名称</th>
+            <th>作者</th>
+            <th>房间号</th>
+            <th>直播地址</th>
+            <th>查看详情</th>
+		</tr>
+	</thead>
+	<tbody>
+        {% for item in items %}
+            {% if forloop.first %}
+                        <tr >
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.author }}</td>
+                            <td>{{ item.roomid }}</td>
+                            <td>{{ item.url }}</td>
+                            <td><a href="#">详情</a></td>
+                        </tr>
+            {% else %}
+                <tr>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.author }}</td>
+                    <td>{{ item.roomid }}</td>
+                    <td>{{ item.url }}</td>
+                    <td><a href="#">详情</a></td>
+                </tr>
+            {% endif %}
+
+
+
+        {% endfor %}
+
+
+	</tbody>
+</table>
+
+      <div style="float:left; width:300px; height:200px; margin-top:50px">
+
+          <video id="videoElement" style="width:100%; height:80%;" autoplay="autoplay" controls="controls" controlslist="nodownload"
+                   disablePictureInPicture>
+</video>
+<script>
+    if (flvjs.isSupported()) {//检查flvjs能否正常使用
+        var videoElement = document.getElementById('videoElement');//使用id选择器找到第二步设置的dom元素
+        var flvPlayer = flvjs.createPlayer({//创建一个新的flv播放器对象
+            type: 'flv',//类型flv
+            url: '{{items.0.path}}'//flv文件地址
+        });
+        flvPlayer.attachMediaElement(videoElement);//将flv视频装载进video元素内
+        flvPlayer.load();//载入视频
+        flvPlayer.play();//播放视频，如果不想要自动播放，去掉本行
+    }
+</script>
+            <button class="btn btn-primary">加入黑名单</button>
+            <button class="btn btn-primary">重点监控</button>
+      </div>
+</div>
+<!--<div style="float:left; width:300px; height:200px; margin-top:50px">-->
+  <!---->
+    <!--&lt;!&ndash;<button class="btn btn-primary">蓝色</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;<button class="btn btn-primary">蓝色</button>&ndash;&gt;-->
+<!--</div>-->
+
+<script src="jquery-3.2.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
