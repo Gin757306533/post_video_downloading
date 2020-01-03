@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 from post_video_downloading.views import index, upload_picture, acc_login, test, \
-    detect_finished_and_celebrity_incide, pawan_video_display, lialan
+    detect_finished_and_celebrity_incide, pawan_video_display, lialan, check, reptile,\
+    reptile_02, reptile_03, distinguish_01, distinguish_02, distinguish_03, distinguish_04,\
+    analysis_01, analysis_02, index2
 from django.conf.urls.static import static
 from django.conf import settings
 import django
@@ -25,10 +27,21 @@ urlpatterns = [
     path('upload_picture/', upload_picture),
     path('login/', acc_login),
     path('index/', index),
+    path('index2/', index2),
     path('test/', test),
     path('detect_finished_and_celebrity_incide/', detect_finished_and_celebrity_incide),
     path('pawan_video_display/', pawan_video_display),
     path('lialan/', lialan),
     # re_path(r'^media/photos/(?P<path>.*)', django.views.static.serve, {'document_root': 'media/photos'}),
     re_path('^$', index),
+    path("check/", check),
+    path("reptile/", reptile),
+    path("reptile_02/", reptile_02),
+    path("reptile_03/", reptile_03),
+    path("distinguish_01/", distinguish_01),
+    path("distinguish_02/", distinguish_02),
+    path("distinguish_03/", distinguish_03),
+    path("distinguish_04/", distinguish_04),
+    path("analysis_01/", analysis_01),
+    path("analysis_02/", analysis_02),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

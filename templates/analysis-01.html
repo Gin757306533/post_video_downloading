@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>live</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="/static/files/main.min.css">
+	<link rel="stylesheet" href="/static/files/iconfont.css">
+	<link rel="stylesheet" href="/static/files/main.css">
+	<link rel="stylesheet" href="/static/files/biz.css">
+</head>
+
+
+<body class="ui-v5 locale-zh">
+    <div id="root-app-container">
+		{%  include 'sidebar.html' %}
+		<div id="bce-content" class="sidebar-collapsed">
+			<div class="header ui-v5 loaded" id="header">
+
+			</div>
+			<!-- 左侧二级菜单 -->
+			<div class="main-area ui-v5">
+				<div id="new-sidebar" class="ai-sidebar-box new-sidebar-box">
+					<div class="sidebar-wrap sidebar-wrap-l1">
+						<ul class="sidebar submenu" sidetype="">
+							<li class="menu-header "><span class="normal-title">分布式爬虫</span><span class="short-title"></span></li>
+							<li class="menu-item menu-item-common overview sidebar-current" sidetype="overview">
+								<a href="/analysis_01/" target="_self" data-track-name="侧边栏导航">
+									<i class="iconfont icon-cluster"></i>
+									<span class="normal-title">概览</span>
+									<span class="short-title"></span>
+								</a>
+							</li>
+							<li class="menu-item menu-item-common appList" sidetype="appList">
+								<a href="/analysis_02/" target="_self" data-track-name="侧边栏导航">
+									<i class="iconfont icon-cluster"></i>
+									<span class="normal-title">分析</span>
+									<span class="short-title"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 左上路径 -->
+				<div id="main" class="ui-v5">
+					<div>
+						<div class="ai-wrapper ai-main-wrap">
+							<div class="main-wrap-new "><!--4-->
+								<app-sidebar class="sidebar">
+									<ul id="sidebar" data-menu=""><!--6--><!--6--></ul>
+								</app-sidebar>
+								<div class="content-wrap san-page">
+									<!--8--><!--8-->
+									<div class="create-content create-content-wrapper">
+										<!--9-->
+										<div class="create-main">
+											<!--10-->
+										<div class="breadcrumb">
+										<span>数据分析</span>
+										<!--13-->
+											<span>
+										<span class="divider">/</span>
+										<span class="active">概览</span><!--15-->
+									</span>
+										<!--13--><!--12-->
+									</div>
+										<div class="list-content ai-report-content">
+											<h2>数据分析1</h2>
+											<div class="section-wrap">
+												<!--88-->
+											</div>
+										</div>
+									<!--10-->
+										</div>
+									</div>
+								</div>
+							<!--4--></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="/static/files/jquery.js"></script>
+<script src="/static/files/main.js"></script>
+</html>

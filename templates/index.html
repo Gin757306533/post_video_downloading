@@ -1,22 +1,311 @@
 <!DOCTYPE html>
-<html lang="zh">
-<header>
-    <meta charset="UTF-8">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>live</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>直播视频监控</title>
-</header>
-<body>
-{%  include 'header.html' %}
-    <div id="wrapper">
-        <div class="container" style="padding:30px;">
-
-            <h1>
-                欢迎：{{ user }}
-            </h1>
+    <link rel="stylesheet" href="/static/files/main.min.css">
+	<link rel="stylesheet" href="/static/files/iconfont.css">
+	<link rel="stylesheet" href="/static/files/main.css">
+	<link rel="stylesheet" href="/static/files/index-biz.css">
+</head>
 
 
-        </div>
+<body class="ui-v5 locale-zh">
+    <div id="root-app-container">
+		{%  include 'sidebar.html' %}
+		<div id="bce-content" class="sidebar-collapsed">
+			<div class="header ui-v5 loaded" id="header">
+				
+			</div>
+			<!-- 左侧路径 -->
+			<div class="main-area ui-v5"><div id="main" class="ui-v5"><div><san-page>
+<div class="index-v2-overview">
+    <div class="content-wrap">
+        <div class="charts">
+            <x-consumption-trend>
+<dl class="x-super-block x-consumption-trend">
+    <dt>警报趋势<!--71--><div class="x-super-block-right">
+        <div data-track-id="" data-track-name="" class="ui-radioselect ui-radioselect-x">
+    <ul>
+        <li id="amonth" class="ui-radio-block ui-radio-selected">
+            <div>
+                <span>一个月</span><!--75-->
+            </div><!--74-->
+        </li>
+		<li id="threemonth" class="ui-radio-block">
+            <div>
+                <span>三个月</span><!--77-->
+            </div><!--76-->
+        </li><!--73-->
+    </ul>
+</div>
+    </div><!--71--></dt><!--70-->
+    <dd><!--78-->
+    
+    <div class="ui-chart ui-chart-x" style="width: 750px; height: 245px; line-height: 245px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;">
+		<img id="jbqsimg" style="height:100%;" src="/static/files/fig8-1.png">
+	</div>
+<!--78--></dd>
+</dl>
+</x-consumption-trend>
+            <x-consumption-distribution>
+<dl class="x-super-block x-consumption-distribution">
+    <dt>今日报警<!--83--><!--83--></dt><!--82-->
+    <dd><!--84-->
+    <div class="date-range">
+        <div data-track-id="" data-track-name="" class="ui-select ui-select-x">
+    <span class="ui-select-text"><!--undefined-->2019年<!--undefined--></span><!--86-->
+    <span class="ui-select-clear"><!--87--></span>
+
+</div>
+        <div data-track-id="" data-track-name="" class="ui-select ui-select-x">
+    <span class="ui-select-text"><!--undefined-->11月<!--undefined--></span><!--91-->
+    <span class="ui-select-clear"><!--92--></span>
+
+</div>
     </div>
+    <div class="ui-chart ui-chart-x" style="width: 210px; height: 215px; line-height: 215px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;">
+		<img id="jbqsimg" style="width:100%;" src="/static/files/fig10.png">
+	</div>
+<!--84--></dd>
+</dl>
+</x-consumption-distribution>
+        </div><!--15-->
+        <div class="securties">
+            <x-bss>
+    <div class="border-box-wrapper clearfix">
+        <div class="border-box">
+            <h2><i class="iconfont title icon-cas"></i>系统统计<span>前24小时</span></h2>
+            <div class="clearfix">
+                <div class="left-box">
+                    <h1>0</h1>
+                    <p>环比 <i class="iconfont icon-sort-ascending equal"></i> 持平</p>
+                </div>
+                <div class="right-box">
+                    <p>
+                         运行时间：<a data-track-id="bssBlock" data-track-name="运行时间" target="_self" title="" href=""><!--289-->235：24：23<!--289--></a>
+                    </p>
+					<p>
+                         警报总次数：<a data-track-id="bssBlock" data-track-name="警报总次数" target="_self" title="" href=""><!--289-->3244<!--289--></a>
+                    </p>
+					<p>
+                         存储空间剩余 ：<a data-track-id="bssBlock" data-track-name="存储空间剩余 " target="_self" title="" href=""><!--289-->3.2T / 12T<!--289--></a>
+                    </p>
+					<p>
+                         人脸注册库数量 ：<a data-track-id="bssBlock" data-track-name="人脸注册库数量 " target="_self" title="" href=""><!--289-->327<!--289--></a>
+                    </p>
+					<p>
+                         黑名单库数量 ：<a data-track-id="bssBlock" data-track-name="运行时间" target="_self" title="" href=""><!--289-->128<!--289--></a>
+                    </p>
+                </div>
+            </div>
+        </div><div class="border-box">
+            <h2><i class="iconfont title icon-waf"></i>重要通知</h2>
+            <div class="clearfix">
+                <div class="left-box">
+                    <p>
+                         <a data-track-id="bssBlock" data-track-name="Web漏洞" target="_self" title="" href=""><!--298-->[用户须知] 用户使用手册v1<!--298--></a>
+                    </p>
+                </div>
+                <div class="right-box">
+
+                </div>
+            </div>
+        </div><!--286-->
+    </div>
+</x-bss>
+        </div><!--16-->
+        <div class="products">
+            <x-actived-prodcuts>
+<dl class="x-super-block x-actived-prodcuts x-actived-prodcuts-4-col">
+    <dt>已开通服务<!--20--><!--20--></dt><!--19-->
+    <dd><!--21-->
+    <div class="actived-product">
+        <div class="actived-product-icon">
+            <i tip="" data-track-id="" data-track-name="" class="iconfont icon-bcc"></i>
+        </div>
+        <div class="actived-product-name" title="分布式爬虫">
+            <a data-track-id="activedProducts" data-track-name="已开通服务" target="_self" title="" href=""><!--109-->分布式爬虫<!--109--></a>
+        </div>
+    </div><div class="actived-product">
+        <div class="actived-product-icon">
+            <i tip="" data-track-id="" data-track-name="" class="iconfont icon-cdn"></i>
+        </div>
+        <div class="actived-product-name" title="数据清洗">
+            <a data-track-id="activedProducts" data-track-name="已开通服务" target="_self" title="" href=""><!--129-->数据清洗<!--129--></a>
+        </div>
+    </div><div class="actived-product">
+        <div class="actived-product-icon">
+            <i tip="" data-track-id="" data-track-name="" class="iconfont icon-tsdb"></i>
+        </div>
+        <div class="actived-product-name" title="人脸识别">
+            <a data-track-id="activedProducts" data-track-name="已开通服务" target="_self" title="" href=""><!--133-->人脸识别<!--133--></a>
+        </div>
+    </div><div class="actived-product">
+        <div class="actived-product-icon">
+            <i tip="" data-track-id="" data-track-name="" class="iconfont icon-iotre"></i>
+        </div>
+        <div class="actived-product-name" title="内容审核">
+            <a data-track-id="activedProducts" data-track-name="已开通服务" target="_self" title="" href=""><!--137-->内容审核<!--137--></a>
+        </div>
+    </div><div class="actived-product">
+        <div class="actived-product-icon">
+            <i tip="" data-track-id="" data-track-name="" class="iconfont icon-unit-new"></i>
+        </div>
+        <div class="actived-product-name" title="视频分析">
+            <a data-track-id="activedProducts" data-track-name="已开通服务" target="_self" title="" href=""><!--233-->视频分析<!--233--></a>
+        </div>
+    </div><!--105--><!--22-->
+<!--21--></dd>
+</dl>
+</x-actived-prodcuts>
+            <x-recommended-prodcuts>
+
+<dl class="x-super-block x-recommended-prodcuts">
+<dt>已开通服务<!--20--><!--20--></dt><!--19-->
+    <dd><!--21-->
+    <form class="ui-form ui-form-x"><!--17-->
+                        <div class="ui-form-item">
+    <div class="ui-form-item-label"><!--20-->选择应用<!--20--></div><!--19-->
+    <div class="ui-form-item-content">
+        <!--21-->
+                            <div data-track-id="" data-track-name="" class="ui-select ui-select-x">
+    <span class="ui-select-text"><!--undefined-->全部应用<!--undefined--></span><!--23-->
+    <span class="ui-select-clear"><!--24--></span>
+
+</div>
+                        <!--21-->
+        <!--27--><!--28--><!--27-->
+        <!--29--><!--30--><!--29-->
+    </div>
+</div>
+                        <div class="ui-form-item">
+    <div class="ui-form-item-label"><!--33-->选择API<!--33--></div><!--32-->
+    <div class="ui-form-item-content">
+        <!--34-->
+                            <div data-track-id="" data-track-name="" class="ui-select ui-select-x">
+    <span class="ui-select-text" title="语音技术 / 全部"><!--undefined-->语音技术 / 全部<!--undefined--></span>
+
+</div>
+                        <!--34-->
+        <!--38--><!--39--><!--38-->
+        <!--40--><!--41--><!--40-->
+    </div>
+</div>
+                        <div class="ui-form-item">
+    <div class="ui-form-item-label"><!--91-->统计项<!--91--></div><!--90-->
+    <div class="ui-form-item-content">
+        <!--92-->
+                            <xui-boxgroup>
+<div class="ui-boxgroup ui-boxgroup-x ui-boxgroup-horizontal state-horizontal" data-track-id="" data-track-name="">
+    <div class="ui-boxgroup-group">
+        <label class="ui-boxgroup-radio ui-boxgroup-wrapper">
+            <input type="radio" name="esui365613"><!--96-->
+            <span title=""><!--undefined-->调用量<!--undefined--></span>
+        </label><label class="ui-boxgroup-radio ui-boxgroup-wrapper">
+            <input type="radio" name="esui365613"><!--97-->
+            <span title=""><!--undefined-->QPS<!--undefined--></span>
+        </label><!--95-->
+    </div><!--94-->
+</div>
+</xui-boxgroup>
+                            <div class="qps-tip-wrap" style="position: relative;">
+                                <div style="position: absolute; top: -28px; left: 140px;">
+                                    <xui-tip data-track-id="" data-track-name="">
+    <div class="ui-tip ui-tip-x">
+
+    </div><!--100-->
+</xui-tip>
+                                </div>
+                            </div><!--98-->
+                        <!--92-->
+        <!--103--><!--104--><!--103-->
+        <!--105--><!--106--><!--105-->
+    </div>
+</div><!--42-->
+                        <div class="ui-form-item">
+    <div class="ui-form-item-label"><!--45-->监控项<!--45--></div><!--44-->
+    <div class="ui-form-item-content">
+        <!--46-->
+                            <xui-boxgroup>
+<div class="ui-boxgroup ui-boxgroup-x ui-boxgroup-horizontal state-horizontal" data-track-id="" data-track-name="">
+    <div class="ui-boxgroup-group">
+        <label class="ui-boxgroup-radio ui-boxgroup-wrapper">
+            <input type="checkbox" name="esui365611"><!--50-->
+            <span title=""><!--undefined-->调用成功<!--undefined--></span>
+        </label><label class="ui-boxgroup-radio ui-boxgroup-wrapper">
+            <input type="checkbox" name="esui365611"><!--51-->
+            <span title=""><!--undefined-->调用失败<!--undefined--></span>
+        </label><!--49-->
+    </div><!--48-->
+</div>
+</xui-boxgroup>
+                        <!--46-->
+        <!--52--><!--53--><!--52-->
+        <!--54--><!--55--><!--54-->
+    </div>
+</div>
+                        <div class="ui-form-item">
+    <div class="ui-form-item-label"><!--58-->时间段<!--58--></div><!--57-->
+    <div class="ui-form-item-content">
+        <!--59-->
+                            <div data-track-id="" data-track-name="" class="ui-rangecalendar ui-rangecalendar-x">
+    <div class="ui-rangecalendar-text">2019-11-12 - 2019-11-12</div>
+    <div class="ui-rangecalendar-arrow"></div>
+
+</div>
+                        <!--59-->
+        <!--63--><!--64--><!--63-->
+        <!--65--><!--66--><!--65-->
+    </div>
+</div>
+                        <div class="ui-form-item">
+    <div class="ui-form-item-label"><!--69--> <!--69--></div><!--68-->
+    <div class="ui-form-item-content">
+        <!--70-->
+                            <div aria-label="" data-track-id="" data-track-name="" class="ui-button ui-button-x skin-primary skin-primary-button ui-button-with-label" style="width: 60px;">
+    <div class="con-btn">
+        <!--73-->
+        <div class="ui-button-label"><!--75--><!--76-->查询<!--76--></div><!--74-->
+    </div><!--72-->
+</div>
+                        <!--70-->
+        <!--77--><!--78--><!--77-->
+        <!--79--><!--80--><!--79-->
+    </div>
+</div>
+                    <!--17--></form></dd>
+</dl>
+</x-recommended-prodcuts>
+        </div>
+
+    </div>
+</div>
+</san-page></div></div></div>
+		</div>
+	</div>
 </body>
+<script src="/static/files/jquery.js"></script>
+<script src="/static/files/main.js"></script>
+<script>
+
+$(function(){
+	//左下角展开关闭
+	$("#threemonth").click(function(){
+		$("#threemonth").addClass("ui-radio-selected");
+		$("#amonth").removeClass("ui-radio-selected");
+		$("#jbqsimg").attr("src","/static/files/fig8-3.png");
+	});
+
+	$("#amonth").click(function(){
+		$("#threemonth").removeClass("ui-radio-selected");
+		$("#amonth").addClass("ui-radio-selected");
+		$("#jbqsimg").attr("src","/static/files/fig8-1.png");
+	});
+	
+
+});
+
+</script>
 </html>

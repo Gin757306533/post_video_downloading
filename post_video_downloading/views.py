@@ -40,11 +40,59 @@ def acc_logout(request):
 
     return redirect("/login")
 
+@login_required
+def check(request):
+    return render_to_response("check.html")
+
+@login_required
+def reptile(request):
+    return render_to_response("reptile-01.html")
+
+
+@login_required
+def reptile_02(request):
+    return render_to_response("reptile-02.html")
+
+
+@login_required
+def reptile_03(request):
+    return render_to_response("reptile-03.html")
+
+
+@login_required
+def distinguish_01(request):
+    return render_to_response("distinguish-01.html")
+
+@login_required
+def distinguish_02(request):
+    return render_to_response("distinguish-02.html")
+
+@login_required
+def distinguish_03(request):
+    return render_to_response("distinguish-03.html")
+
+@login_required
+def distinguish_04(request):
+    return render_to_response("distinguish-04.html")
+
+
+@login_required
+def analysis_01(request):
+    return render_to_response("analysis-01.html")
+
+
+@login_required
+def analysis_02(request):
+    return render_to_response("analysis-02.html")
 
 
 @login_required
 def index(request):
     return render_to_response('index.html', {"user": request.user.username})
+
+@login_required
+def index2(request):
+    return render_to_response('index2.html', {"user": request.user.username})
 
 @login_required
 def pawan_video_display(request):
@@ -127,7 +175,7 @@ def upload_picture(request):
     context = {
         'items': contexts
     }
-    return render_to_response("upload_picture.html",context )
+    return render_to_response("upload_picture.html", context)
 
 
 def lialan(request):

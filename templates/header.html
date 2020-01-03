@@ -1,169 +1,35 @@
-
-
-
-
-
-
-    <!--awesome font include-->
-    <link type="text/css" rel="stylesheet" href="/static/copy/assets/css/font-awesome.min.css" />
-    <!--include plugin css-->
-    <link type="text/css" rel="stylesheet" href="/static/copy/src/jquery-rvnm.css" />
-
-
-    <nav id="navbar" class="">
-        <ul>
-            <li>
-                <span class="spliter">
-                    <i class="fa fa-bank"></i>
-                    首页
-                </span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-bell-o"></i>
-                    用户设置
-                </a>
-                <ul>
-                    <li>
-                        <a href="#">
-                            设置一
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            设置二
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            设置三
-                        </a>
-                    </li>
-
-                </ul>
-
-            </li>
-            <li>
-                <a href="/upload_picture">
-                    <i class="fa fa-plus-square"></i>
-                    人物图片上传
-                </a>
-                <!--<ul>-->
-                    <!--<li>-->
-                        <!--<a href="#">-->
-                            <!--semper leo-->
-                        <!--</a>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<a>-->
-                            <!--habitasse platea-->
-                        <!--</a>-->
-                        <!--<ul>-->
-                            <!--<li>-->
-                                <!--<a href="#">-->
-                                    <!--dictumst-->
-                                <!--</a>-->
-                            <!--</li>-->
-                            <!--<li>-->
-                                <!--<a href="#">-->
-                                    <!--Vivamus facilisis-->
-                                <!--</a>-->
-                            <!--</li>-->
-                            <!--<li>-->
-                                <!--<a href="#">-->
-                                    <!--In hac habitasse-->
-                                <!--</a>-->
-                                <!--<ul>-->
-                                    <!--<li><a href="#"> platea dictumst </a></li>-->
-                                    <!--<li><a href="#">Nunc sed lacus</a></li>-->
-                                    <!--<li><a href="#">euismod gravida </a></li>-->
-
-                                <!--</ul>-->
-
-                            <!--</li>-->
-
-                        <!--</ul>-->
-
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<a href="#">-->
-                            <!--sed placerat ipsum-->
-                        <!--</a>-->
-                    <!--</li>-->
-
-                <!--</ul>-->
-
-            </li>
-            <!--<li class="">-->
-                <!--<a href="#">-->
-                    <!--<i class="fa fa-bullhorn"></i>-->
-                    <!--待定-->
-                <!--</a>-->
-            <!--</li>-->
-            <!--<li>-->
-                <!--<a href="#">-->
-                    <!--<i class="fa fa-building"></i>-->
-                    <!--待定-->
-                <!--</a>-->
-            <!--</li>-->
-            <!--<li>-->
-                <!--<span class="spliter">-->
-                    <!--<i class="fa fa-bars"></i>-->
-                    <!--待定-->
-                <!--</span>-->
-            <!--</li>-->
-            <li>
-                <a href="#">
-                    <i class="fa fa-align-center"></i>
-                    demo展示
-
-                </a>
-                <ul>
-                    <!--<li>-->
-                        <!--<a href="#">-->
-                            <!--当前在爬数据-->
-                        <!--</a>-->
-                    <!--</li>-->
-                    <li>
-                        <a href="/pawan_video_display/">
-                            当前爬完数据
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/detect_finished_and_celebrity_incide">
-                            当前检测出异常的数据
-                        </a>
-                    </li>
-
-                </ul>
-
-            </li>
-
-            <li>
-                <a href="#">
-                    <i class="fa fa-bank"></i>
-                    待定
-                </a>
-            </li>
-        </ul>
-
-    </nav>
-
-
-    <script src="/static/copy/js/jquery-1.11.0.min.js" type="text/javascript"></script>
-    <!--include plugin js-->
-    <script type="text/javascript" src="/static/copy/src/jquery-rvnm.js"></script>
-    <!--js run code-->
-    <script type="text/javascript">
-        $(function () {
-            var rvnMenu = $("#navbar").rvnm({
-                //                    mode: 'mobile',
-                //                    responsive: false,
-                searchable: true,
-                theme: 'dark-lesb'
-            });
-            console.log(rvnMenu);
-            //                rvnMenu.setMode('minimal');
-            rvnMenu.setTheme('dark-ruby');
-        });
-    </script>
+<div class="header ui-v5 loaded" id="header">
+	<div class="header-select user-info">
+		<a data-track-id="console-header" data-track-name="用户头像（导航条）" href="" class="username" id="username" title="xxx">x</a>
+		<div class="select-items user-nav">
+			<ul>
+				<li class="user-menu"><a data-track-id="console-header" data-track-name="用户中心" title="用户中心" href=""><i class="iconfont icon-myaccount"></i>用户中心</a></li>
+				<li class="user-menu"><a data-track-id="console-header" data-track-name="安全认证" title="安全认证" href=""><i class="iconfont icon-authinfo"></i>安全认证</a></li>
+				<li class="user-menu header-guide-intro-3" title="多用户访问控制"><a data-track-id="console-header" data-track-name="多用户访问控制" href=""><i class="iconfont icon-iam-user"></i>多用户访问控制</a></li>
+				<li class="user-menu" title="退出"><a href="" id="logout"><i class="iconfont icon-exit"></i>退出</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="header-guide-intro-1">
+		<div class="doc-nav nav-item" title="财务">
+			<a class="nav-item-link" href="">
+				<span class="header-title">财务</span>
+			</a>
+		</div>
+		<div class="organization-nav header-guide-intro-2 nav-item">
+			<a data-track-id="console-header" data-track-name="企业组织" href="">
+				<span class="header-title">维护人员联系方式</span>
+			</a>
+		</div>
+		<div class="doc-nav nav-item" title="帮助文档">
+			<a class="nav-item-link" href="">
+				<span class="header-title">帮助文档</span>
+			</a>
+		</div>
+		<div class="msg-nav nav-item">
+			<span class="msg-icon">
+				<span class="header-title">重要警报消息</span>
+			</span>
+		</div>
+	</div>
+</div>
